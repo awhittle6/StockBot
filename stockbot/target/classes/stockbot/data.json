@@ -1,0 +1,16 @@
+[
+	{
+		"website": {
+			"url": "https://www.amazon.com/LG-27GN950-B-Ultragear-Response-Compatibility/dp/B08BCRYS6B",
+			"xpath": "//*[@id=\"sellerProfileTriggerId\"]",
+			"msrp_seller": "Amazon.com"
+		}
+	},
+	{
+		"website": {
+			"url": "https://www.microcenter.com/product/621439/raspberry-pi-4-model-b-2gb-ddr4",
+			"xpath": "/html/head/script[25]",
+			"msrp_seller": ""
+		}
+	}	
+]

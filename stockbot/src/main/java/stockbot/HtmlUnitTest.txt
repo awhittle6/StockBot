@@ -1,0 +1,19 @@
+package stockbot;
+import com.gargoylesoftware.htmlunit.*;
+import com.gargoylesoftware.htmlunit.html.Html;
+import com.gargoylesoftware.htmlunit.html.HtmlPage;
+
+import org.apache.http.impl.client.HttpClientBuilder;
+public class HtmlUnitTest {
+    public static void main(String[] args) throws Exception{
+        WebClient client = new WebClient(BrowserVersion.INTERNET_EXPLORER);
+        client.getOptions().setJavaScriptEnabled(true);
+        System.out.println(HttpClientBuilder.class.getProtectionDomain().getCodeSource().getLocation());
+        client.getOptions().setCssEnabled(true);
+//        
+        HtmlPage htmlPage = client.getPage("https://www.microcenter.com/product/621439/raspberry-pi-4-model-b-2gb-ddr4");
+        //System.out.println(htmlPage.getTitleText());
+
+        client.close();
+    }
+}

@@ -1,0 +1,28 @@
+package stockbot;
+
+import com.gargoylesoftware.htmlunit.BrowserVersion;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;	
+
+public class SeleniumHtmlUnitTest {
+    public static void main(String[] args){
+        java.util.logging.Logger.getLogger("com.gargoylesoftware").setLevel(java.util.logging.Level.OFF);
+         HtmlUnitDriver htmlUDriver = new HtmlUnitDriver();
+         htmlUDriver.setJavascriptEnabled(true);
+         WebDriver driver = (WebDriver) htmlUDriver;
+         System.out.println(driver instanceof JavascriptExecutor);
+         driver.get("https://www.microcenter.com/product/621439/raspberry-pi-4-model-b-2gb-ddr4");
+         try {
+            driver.wait(10);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+         ((JavascriptExecutor)driver).executeScript("document.querySelector(\"head > script:nth-child(65)\");");
+
+    }
+}
